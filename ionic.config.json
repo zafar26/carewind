@@ -1,0 +1,7 @@
+{
+  "name": "carewind",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
