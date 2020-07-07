@@ -10,7 +10,6 @@ import {
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { time as tabIcon1, people as tabIcon2, pieChart as tabIcon3} from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
@@ -34,29 +33,8 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
-interface TabData {
-  tabName : string;
-  tabIcon : string;
-  tabNumber : number;
-}
-
-const tabDataArray : Array<TabData> = [
-  {
-    tabName   : "Bookings",
-    tabIcon   : tabIcon1,
-    tabNumber : 1
-  },
-  {
-    tabName   : "Patients",
-    tabIcon   : tabIcon2,
-    tabNumber : 2
-  },
-  {
-    tabName   : "Reports",
-    tabIcon   : tabIcon3,
-    tabNumber : 3
-  }
-]
+/* config imports */
+import { tabDataArray } from './configs/tabs'
 
 let tabs = tabDataArray.map((item, key) => (
     <IonTabButton key={key} tab={`tab${item.tabNumber}`} href={`/tab${item.tabNumber}`}>
