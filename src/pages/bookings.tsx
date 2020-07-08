@@ -12,7 +12,7 @@ function Bookings() {
       <IonContent>
         <IonList>
           <Card  name="Khaja Naquiuddin" age={32} days={3} status="Done"/>
-          <Card  name="MOhammed Zafar" age={22} days={2} status="Done"/>
+          <Card  name="Mohammed Zafar" age={22} days={2} status="Done"/>
           <Card  name="M.A Mudassir Ahmed" age={22} days={1} status="Done"/>
           <Card  name="Qutubuddin" age={32} days={3} status="Cancelled"/>
         </IonList>
