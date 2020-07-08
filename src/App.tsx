@@ -12,7 +12,7 @@ import {
   IonContent
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { timeOutline, people, pieChart } from 'ionicons/icons';
+// import { timeOutline, people, pieChart } from 'ionicons/icons';
 
 import Bookings from './pages/bookings';
 import Patients from './pages/patients';
@@ -37,6 +37,16 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+/* config imports */
+import { tabDataArray } from './configs/tabs'
+
+let tabs = tabDataArray.map((item, key) => (
+    <IonTabButton key={key} tab={`tab${item.tabName}`} href={`${item.route}`}>
+      <IonIcon icon={item.tabIcon} />
+      <IonLabel>{item.tabName}</IonLabel>
+    </IonTabButton>
+))
+
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
@@ -48,18 +58,7 @@ const App: React.FC = () => (
           <Route path="/" render={() => <Redirect to="/bookings" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="bookings" href="/bookings">
-            <IonIcon icon={timeOutline} />
-            <IonLabel>Bookings</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="patients" href="/patients">
-            <IonIcon icon={people} />
-            <IonLabel>Patients</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="reports" href="/reports">
-            <IonIcon icon={pieChart} />
-            <IonLabel>Reports</IonLabel>
-          </IonTabButton>
+          {tabs}
         </IonTabBar>
       </IonTabs>
     </IonReactRouter>
