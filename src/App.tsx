@@ -3,21 +3,17 @@ import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
   IonIcon,
-  IonPage,
   IonLabel,
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
-  IonTabs,
-  IonContent
+  IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-// import { timeOutline, people, pieChart } from 'ionicons/icons';
-
-import Bookings from './pages/bookings';
+// Import Components
+import Bookings from "./pages/Bookings";
 import Patients from './pages/patients';
 import Reports from './pages/reports';
-import Header from './components/Header';
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -40,12 +36,12 @@ import './theme/variables.css';
 /* config imports */
 import { tabDataArray } from './configs/tabs'
 
-let tabs = tabDataArray.map((item, key) => (
-    <IonTabButton key={key} tab={`tab${item.tabName}`} href={`/${item.route}`}>
-      <IonIcon icon={item.tabIcon} />
-      <IonLabel>{item.tabName}</IonLabel>
-    </IonTabButton>
-))
+let tabs = tabDataArray.map((item, key) => 
+  <IonTabButton key={key} tab={`tab${item.name}`} href={`/${item.route}`}>
+    <IonIcon icon={item.icon} />
+    <IonLabel>{item.name}</IonLabel>
+  </IonTabButton>
+)
 
 const App: React.FC = () => (
   <IonApp>
