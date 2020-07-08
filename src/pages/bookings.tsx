@@ -7,13 +7,14 @@ import Header from '../components/Header';
 import { Patients } from '../utils/patients';
 
 
-export default  function Bookings() {
+export default function Bookings() {
   return (
     <IonPage>
       <Header />
       <IonContent>
         <IonList>
-          {Patients.map((patient) => <Card name={patient.name} age={patient.age} days={patient.days} status={patient.status} />)}
+          {Patients.map((patient:{name:string,age:number,days:number, status:string}) => 
+          <Card name={patient.name} age={patient.age} days={patient.days} status={patient.status} />)}
         </IonList>
       </IonContent>
     </IonPage>
