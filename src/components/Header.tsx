@@ -11,7 +11,7 @@ const Header: React.FC = () => {
   return (
     <IonHeader >
         <IonToolbar>
-          <IonTitle>DocsWind</IonTitle>
+          <IonTitle>CareWind</IonTitle>
             <IonButtons slot="primary">
           <IonButton>
             <IonIcon slot="icon-only" icon={search} />

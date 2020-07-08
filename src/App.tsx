@@ -41,7 +41,7 @@ import './theme/variables.css';
 import { tabDataArray } from './configs/tabs'
 
 let tabs = tabDataArray.map((item, key) => (
-    <IonTabButton key={key} tab={`tab${item.tabName}`} href={`${item.route}`}>
+    <IonTabButton key={key} tab={`tab${item.tabName}`} href={`/${item.route}`}>
       <IonIcon icon={item.tabIcon} />
       <IonLabel>{item.tabName}</IonLabel>
     </IonTabButton>

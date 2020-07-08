@@ -12,18 +12,18 @@ export const tabDataArray : Array<TabData> = [
     {
       tabName   : "Bookings",
       tabIcon   : tabIcon1,
-      route : "/bookings"
+      route     : "bookings"
     },
     {
       tabName   : "Patients",
       tabIcon   : tabIcon2,
-      route : "/patients"
+      route     : "patients"
 
     },
     {
       tabName   : "Reports",
       tabIcon   : tabIcon3,
-      route : "/reports"
+      route     : "reports"
 
     }
   ]
