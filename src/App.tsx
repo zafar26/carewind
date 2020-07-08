@@ -3,18 +3,21 @@ import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
   IonIcon,
+  IonPage,
   IonLabel,
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
-  IonTabs
+  IonTabs,
+  IonContent
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
+import { timeOutline, people, pieChart } from 'ionicons/icons';
 
+import Bookings from './pages/bookings';
+import Patients from './pages/patients';
+import Reports from './pages/reports';
+import Header from './components/Header';
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -39,23 +42,23 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route path="/tab1" component={Tab1} exact={true} />
-          <Route path="/tab2" component={Tab2} exact={true} />
-          <Route path="/tab3" component={Tab3} />
-          <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
+          <Route path="/bookings" component={Bookings} exact={true} />
+          <Route path="/patients" component={Patients} exact={true} />
+          <Route path="/reports" component={Reports} />
+          <Route path="/" render={() => <Redirect to="/bookings" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+          <IonTabButton tab="bookings" href="/bookings">
+            <IonIcon icon={timeOutline} />
+            <IonLabel>Bookings</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+          <IonTabButton tab="patients" href="/patients">
+            <IonIcon icon={people} />
+            <IonLabel>Patients</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+          <IonTabButton tab="reports" href="/reports">
+            <IonIcon icon={pieChart} />
+            <IonLabel>Reports</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
