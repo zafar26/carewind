@@ -36,12 +36,18 @@ import './theme/variables.css';
 /* config imports */
 import { tabDataArray } from './configs/tabs'
 
-let tabs = tabDataArray.map((item, key) => 
+/* page  imports */
+import FullBookingPage from './pages/fullBookingPage';
+
+
+let tabs = tabDataArray.map((item, key) =>
   <IonTabButton key={key} tab={`tab${item.name}`} href={`/${item.route}`}>
     <IonIcon icon={item.icon} />
     <IonLabel>{item.name}</IonLabel>
   </IonTabButton>
 )
+
+
 
 const App: React.FC = () => (
   <IonApp>
@@ -51,6 +57,7 @@ const App: React.FC = () => (
           <Route path="/bookings" component={Bookings} exact={true} />
           <Route path="/patients" component={Patients} exact={true} />
           <Route path="/reports" component={Reports} />
+          <Route path="/booking" component={FullBookingPage} />
           <Route path="/" render={() => <Redirect to="/bookings" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
