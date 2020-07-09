@@ -11,7 +11,7 @@ import {
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 // Import Components
-import Bookings from "./pages/Bookings";
+import Bookings from "./pages/bookings";
 import Patients from './pages/patients';
 import Reports from './pages/reports';
 /* Core CSS required for Ionic components to work properly */
