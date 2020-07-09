@@ -7,7 +7,7 @@ function Layout({ children }: InferProps<typeof Layout.propTypes>) {
   return (
     <IonPage>
       <Header />
-      <IonContent>
+      <IonContent fullscreen>
         {children}
       </IonContent>
     </IonPage>

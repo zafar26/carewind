@@ -1,8 +1,8 @@
 import React from 'react';
-import './patients.css';
-import Layout from '../containers/Layout';
-import { Patients as pateintsData } from '../utils/patients';
-import PatientAbstractCard from '../components/patientAbstractCard/patientAbstractCard';
+import './index.scss';
+import Layout from '../../containers/layout';
+import { Patients as pateintsData } from '../../utils/patients';
+import PatientAbstractCard from '../../components/patientAbstractCard/patientAbstractCard';
 import { IonItem } from '@ionic/react';
 
 function Patients() {
