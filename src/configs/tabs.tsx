@@ -8,23 +8,21 @@ interface TabData {
     route: string;
 };
 
-export const tabDataArray : Array<TabData> = [
+export const tabDataArray: Array<TabData> = [
     {
-      name   : "Bookings",
-      icon   : tabIcon1,
-      route  : "bookings"
+        name: "Bookings",
+        icon: tabIcon1,
+        route: "bookings"
     },
     {
-      name   : "Patients",
-      icon   : tabIcon2,
-      route  : "patients"
-
+        name: "Patients",
+        icon: tabIcon2,
+        route: "patients"
     },
     {
-      name   : "Reports",
-      icon   : tabIcon3,
-      route  : "reports"
-
+        name: "Reports",
+        icon: tabIcon3,
+        route: "reports"
     }
-  ]
+]
 

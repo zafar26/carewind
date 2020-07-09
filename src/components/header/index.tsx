@@ -4,25 +4,25 @@ import { ellipsisVertical, search } from 'ionicons/icons';
 import './index.scss';
 
 interface ContainerProps {
-  name: string;
+    name: string;
 }
 
 const Header: React.FC = () => {
-  return (
-    <IonHeader translucent>
-      <IonToolbar>
-        <IonTitle>CareWind</IonTitle>
-        <IonButtons slot="primary">
-          <IonButton>
-            <IonIcon slot="icon-only" icon={search} />
-          </IonButton>
-          <IonButton>
-            <IonIcon slot="icon-only" icon={ellipsisVertical} />
-          </IonButton>
-        </IonButtons>
-      </IonToolbar>
-    </IonHeader>
-  );
+    return (
+        <IonHeader translucent>
+            <IonToolbar>
+                <IonTitle>CareWind</IonTitle>
+                <IonButtons slot="primary">
+                    <IonButton>
+                        <IonIcon slot="icon-only" icon={search} />
+                    </IonButton>
+                    <IonButton>
+                        <IonIcon slot="icon-only" icon={ellipsisVertical} />
+                    </IonButton>
+                </IonButtons>
+            </IonToolbar>
+        </IonHeader>
+    );
 };
 
 export default Header;

@@ -8,57 +8,57 @@ dayjs.extend(relativeTime);
 
 // Fix the types to use it properly
 interface STATUS {
-  label: string;
-  color: string;
-  value: string;
+    label: string;
+    color: string;
+    value: string;
 }
 
 interface STATUSES {
-  upcoming: STATUS,
-  done: STATUS,
-  cancelled: STATUS,
-  noShow: STATUS
+    upcoming: STATUS,
+    done: STATUS,
+    cancelled: STATUS,
+    noShow: STATUS
 }
 
 
 const STATUSES: { [key: string]: STATUS; } = {
-  upcoming : {
-    label: "Upcoming",
-    color: "primary",
-    value: "upcoming"
-  },
-  done: {
-    label: "Done",
-    color: "success",
-    value: "done"
-  },
-  cancelled: {
-    label: "Cacelled",
-    color: "danger",
-    value: "canclled"
-  },
-  noShow: {
-    label: "No Show",
-    color: "warning",
-    value: "no-show"
-  }
+    upcoming: {
+        label: "Upcoming",
+        color: "primary",
+        value: "upcoming"
+    },
+    done: {
+        label: "Done",
+        color: "success",
+        value: "done"
+    },
+    cancelled: {
+        label: "Cacelled",
+        color: "danger",
+        value: "canclled"
+    },
+    noShow: {
+        label: "No Show",
+        color: "warning",
+        value: "no-show"
+    }
 };
 
 interface Props {
-  statusValue: string;
-  dateTime: string;
+    statusValue: string;
+    dateTime: string;
 }
 
 
 const BookingInfo: FC<Props> = ({ statusValue, dateTime }) => {
-  let agoDate = dayjs(dateTime);
-  return (
-    <IonLabel class="ion-text-end">
-      <p><IonIcon icon={timeOutline} /> {agoDate.fromNow()} </p>
-      <IonBadge color={STATUSES[statusValue].color}>{STATUSES[statusValue].label}</IonBadge>
-    </IonLabel>
+    let agoDate = dayjs(dateTime);
+    return (
+        <IonLabel class="ion-text-end">
+            <p><IonIcon icon={timeOutline} /> {agoDate.fromNow()} </p>
+            <IonBadge color={STATUSES[statusValue].color}>{STATUSES[statusValue].label}</IonBadge>
+        </IonLabel>
 
-  )
+    )
 }
 
 export default BookingInfo;

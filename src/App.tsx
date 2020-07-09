@@ -11,12 +11,6 @@ import {
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
-/* page  imports */
-import Bookings from "./pages/bookings";
-import Patients from './pages/patients';
-import Reports from './pages/reports';
-import FullBookingPage from './pages/fullBookingPage';
-
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -39,7 +33,11 @@ import './theme/variables.css';
 /* config imports */
 import { tabDataArray } from './configs/tabs'
 
-
+/* page  imports */
+import Bookings from "./pages/bookings";
+import Patients from './pages/patients';
+import Reports from './pages/reports';
+import SingleBooking from './pages/singleBooking';
 
 
 let tabs = tabDataArray.map((item, key) =>
@@ -50,7 +48,6 @@ let tabs = tabDataArray.map((item, key) =>
 )
 
 
-
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
@@ -59,7 +56,7 @@ const App: React.FC = () => (
           <Route path="/bookings" component={Bookings} exact={true} />
           <Route path="/patients" component={Patients} exact={true} />
           <Route path="/reports" component={Reports} />
-          <Route path="/booking" component={FullBookingPage} />
+          <Route path="/booking" component={SingleBooking} />
           <Route path="/" render={() => <Redirect to="/bookings" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
