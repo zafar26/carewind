@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.scss';
 import Layout from '../../containers/layout';
-import { Patients as pateintsData } from '../../utils/patients';
+import { Patients as pateintsData } from '../../data/patients';
 import PatientAbstractCard from '../../components/patientAbstractCard/patientAbstractCard';
 import { IonItem } from '@ionic/react';
 
