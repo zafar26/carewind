@@ -1,6 +1,9 @@
-ion-card{
-    display:'flex';
-    justify-content:"space-between";
-   margin:2;
-    padding:0
+ion-badge {
+    padding:0;
+    font-size: small;
+    color:green;
+    /* background:"transparent"; */
+    /* --color:green; */
+    font-weight:normal;
+    background:none;
 }
