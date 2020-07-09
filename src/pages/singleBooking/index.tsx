@@ -1,6 +1,6 @@
 import React from 'react';
 import { IonCard } from "@ionic/react";
-import PatientAbstractCard from '../../components/patientAbstractCard/patientAbstractCard';
+import PatientAbstractCard from '../../components/patientAbstractCard';
 import Layout from '../../containers/layout';
 
 

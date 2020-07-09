@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes, { InferProps } from 'prop-types'
 import { IonPage, IonContent } from '@ionic/react'
-import Header from '../../components/Header'
+import Header from '../../components/header'
 
 function Layout({ children }: InferProps<typeof Layout.propTypes>) {
   return (

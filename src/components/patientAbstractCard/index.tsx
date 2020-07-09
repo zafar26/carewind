@@ -1,6 +1,6 @@
 import React from 'react';
 import { IonThumbnail, IonLabel } from "@ionic/react";
-import './patientAbstractCard.scss';
+import './index.scss';
 
 interface PatientAbstractCardProps {
     patientName: string;
