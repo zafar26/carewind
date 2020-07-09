@@ -47,7 +47,8 @@
     ]
   },
   "devDependencies": {
-    "@capacitor/cli": "2.2.1"
+    "@capacitor/cli": "2.2.1",
+    "@types/prop-types": "^15.7.3"
   },
   "description": "An Ionic project"
 }
