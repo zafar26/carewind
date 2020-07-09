@@ -1,5 +1,5 @@
 import React from 'react';
-import { IonItem, IonItemGroup } from '@ionic/react';
+import { IonItem } from '@ionic/react';
 import './bookingItem.scss';
 import PatientAbstractCard from './patientAbstractCard/patientAbstractCard';
 import BookingInfo from './BookingInfo';
