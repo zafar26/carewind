@@ -13,8 +13,8 @@ export default function Bookings() {
       <Header />
       <IonContent fullscreen>
         <IonList>
-          {Patients.map((patient: { name: string, age: number, days: number, status: string }, key) =>
-            <BookingItem key={`patient-${key}`} name={patient.name} age={patient.age} days={patient.days} status={patient.status} />)}
+          {Patients.map((patient: { name: string, age: number, dateTime: string, statusValue: string }, key) =>
+            <BookingItem key={`patient-${key}`} name={patient.name} age={patient.age} dateTime={patient.dateTime} statusValue={patient.statusValue} />)}
         </IonList>
       </IonContent>
     </IonPage>
