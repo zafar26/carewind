@@ -1,6 +1,5 @@
 import React from 'react';
-import Layout from '../../containers/Layout';
-import { IonCard } from "@ionic/react";
+import Layout from '../../containers/layout';
 import { Patients } from '../../data/patients';
 import SingleBookingItem from '../../components/singleBookingItem';
 

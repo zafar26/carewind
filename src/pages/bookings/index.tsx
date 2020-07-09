@@ -2,7 +2,7 @@ import React from 'react';
 import { IonList } from '@ionic/react';
 import BookingItem from "../../components/bookingItem";
 import { Patients } from '../../data/patients';
-import Layout from '../../containers/Layout';
+import Layout from '../../containers/layout';
 
 
 function Bookings() {
