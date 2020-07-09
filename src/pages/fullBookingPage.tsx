@@ -1,25 +1,25 @@
 import React from 'react';
-import { IonPage, IonHeader, IonTitle, IonContent, IonToolbar } from "@ionic/react";
-import PatientAbstractCard from '../components/patientAbstractCard/patientAbstractCard';
+import { IonPage, IonCard, IonContent, IonItem, IonIcon } from "@ionic/react";
+import PatientAbstract from '../components/patientAbstract';
 
-const patientBookingData = {
-    patientName: "Shah Rukh Khan",
-    patientGender: "Male",
-    patientAge: 54,
-    patientPic: "avatar.png",
-    patientSymptoms: ["fever", "head-ache", "body-pains", "stomach-ache", "cold", "dizzyness"]
-}
+
+import { Patients } from '../utils/patients'
+import SymptomsContainer from '../components/symptomsContainer';
+import { chevronForward } from 'ionicons/icons';
+import Header from '../components/header';
 
 const FullBookingPage: React.FC = () => {
     return (
         <IonPage>
-            <IonHeader>
-                <IonToolbar>
-                    <IonTitle>booking</IonTitle>
-                </IonToolbar>
-            </IonHeader>
+            <Header />
             <IonContent>
-                <PatientAbstractCard patientName={patientBookingData.patientName} patientGender={patientBookingData.patientGender} patientAge={patientBookingData.patientAge} patientPic={patientBookingData.patientPic} patientSymptoms={patientBookingData.patientSymptoms} />
+                <IonCard>
+                    <IonItem lines="none">
+                        <PatientAbstract patientName={Patients[0].name} patientGender={Patients[0].gender} patientAge={Patients[0].age} patientPic={Patients[0].pic} />
+                        <IonIcon icon={ chevronForward } slot="end" />
+                    </IonItem>
+                    <SymptomsContainer symptomsArray={Patients[0].symptoms} />
+                </IonCard>
             </IonContent>
         </IonPage>
     )

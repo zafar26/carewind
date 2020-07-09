@@ -1,6 +1,6 @@
 import React from 'react';
 import { IonBadge, IonItem, IonItemSliding } from '@ionic/react';
-import './symptomsContainer.css'
+import './index.scss'
 
 interface symptomsContainerProps {
     symptomsArray: Array<string>;

@@ -3,26 +3,28 @@ import { people as tabIcon2 } from 'ionicons/icons';
 import { pieChart as tabIcon3 } from 'ionicons/icons';
 
 interface TabData {
-    tabName: string;
-    tabIcon: string;
-    tabNumber: number;
+    name: string;
+    icon: string;
+    route: string;
 };
 
 export const tabDataArray : Array<TabData> = [
     {
-      tabName   : "Bookings",
-      tabIcon   : tabIcon1,
-      tabNumber : 1
+      name   : "Bookings",
+      icon   : tabIcon1,
+      route  : "bookings"
     },
     {
-      tabName   : "Patients",
-      tabIcon   : tabIcon2,
-      tabNumber : 2
+      name   : "Patients",
+      icon   : tabIcon2,
+      route  : "patients"
+
     },
     {
-      tabName   : "Reports",
-      tabIcon   : tabIcon3,
-      tabNumber : 3
+      name   : "Reports",
+      icon   : tabIcon3,
+      route  : "reports"
+
     }
   ]
 

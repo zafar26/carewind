@@ -10,9 +10,12 @@ import {
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
+
+/* page  imports */
+import Bookings from "./pages/bookings";
+import Patients from './pages/patients';
+import Reports from './pages/reports';
+import FullBookingPage from './pages/fullBookingPage';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -36,26 +39,28 @@ import './theme/variables.css';
 /* config imports */
 import { tabDataArray } from './configs/tabs'
 
-/* page  imports */
-import FullBookingPage from './pages/fullBookingPage';
 
-let tabs = tabDataArray.map((item, key) => (
-    <IonTabButton key={key} tab={`tab${item.tabNumber}`} href={`/tab${item.tabNumber}`}>
-      <IonIcon icon={item.tabIcon} />
-      <IonLabel>{item.tabName}</IonLabel>
-    </IonTabButton>
-))
+
+
+let tabs = tabDataArray.map((item, key) =>
+  <IonTabButton key={key} tab={`tab${item.name}`} href={`/${item.route}`}>
+    <IonIcon icon={item.icon} />
+    <IonLabel>{item.name}</IonLabel>
+  </IonTabButton>
+)
+
+
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route path="/tab1" component={Tab1} exact={true} />
-          <Route path="/tab2" component={Tab2} exact={true} />
-          <Route path="/tab3" component={Tab3} />
+          <Route path="/bookings" component={Bookings} exact={true} />
+          <Route path="/patients" component={Patients} exact={true} />
+          <Route path="/reports" component={Reports} />
           <Route path="/booking" component={FullBookingPage} />
-          <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
+          <Route path="/" render={() => <Redirect to="/bookings" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           {tabs}
