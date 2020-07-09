@@ -1,5 +1,5 @@
 import React from 'react';
-import { IonPage, IonHeader, IonTitle, IonContent, IonToolbar } from "@ionic/react";
+import { IonPage, IonCard, IonHeader, IonTitle, IonContent, IonToolbar } from "@ionic/react";
 import PatientAbstractCard from '../components/patientAbstractCard/patientAbstractCard';
 
 
@@ -12,7 +12,9 @@ const FullBookingPage: React.FC = () => {
                 </IonToolbar>
             </IonHeader>
             <IonContent>
-                <PatientAbstractCard patientName="Shah Rukh Khan" patientAge={54} patientPic="avatar.png" />
+                <IonCard>
+                    <PatientAbstractCard patientName="Shah Rukh Khan" patientAge={54} patientPic="/assets/images/avatar.png" />
+                </IonCard>
             </IonContent>
         </IonPage>
     )
