@@ -1,7 +1,8 @@
-import React, { Fragment } from 'react';
-import { IonItem } from '@ionic/react';
+import React from 'react';
+import { IonItem, IonButton, IonIcon } from '@ionic/react';
 import PatientAbstract from '../patientAbstract';
 import SymptomsContainer from '../symptomsContainer';
+import { add } from 'ionicons/icons';
 
 interface SingleBookingItemProps {
     name: string;
@@ -16,12 +17,16 @@ const SingleBookingItem: React.FC<SingleBookingItemProps> = (props) => {
     const { name, gender, age, pic, symptoms } = props;
 
     return (
-        <Fragment>
+        <>
             <IonItem detail={true} lines="none">
                 <PatientAbstract patientName={name} patientGender={gender} patientAge={age} patientPic={pic} />
             </IonItem>
-            <SymptomsContainer symptomsArray={symptoms} />
-        </Fragment >
+            <IonItem lines="none">
+                <SymptomsContainer symptomsArray={symptoms} />
+                <IonButton slot="end" color="dark" onClick={() => {}}><IonIcon icon={add} /></IonButton>
+            </IonItem>
+
+        </>
     )
 };
 

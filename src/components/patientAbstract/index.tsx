@@ -10,7 +10,7 @@ interface PatientAbstractProps {
 }
 
 
-/* this component should be wrapped in IonItem which is further wrapped by IonCard */
+/* this component should be wrapped in IonItem, and further can be wrapped by IonCard if needed.*/
 
 const PatientAbstract: React.FC<PatientAbstractProps> = (props) => {
 
