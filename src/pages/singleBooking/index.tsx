@@ -1,7 +1,7 @@
 import React from 'react';
 import { IonCard } from "@ionic/react";
 import PatientAbstractCard from '../../components/patientAbstractCard';
-import Layout from '../../containers/layout';
+import Layout from '../../containers/Layout';
 
 
 function singleBooking() {

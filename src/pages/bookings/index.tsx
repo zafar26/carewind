@@ -1,9 +1,10 @@
 import React from 'react';
 import { IonList } from '@ionic/react';
-import BookingItem from "../../components/bookingItem";
+import BookingItem from "../../components/BookingItem";
 import { Patients } from '../../data/patients';
-import Layout from '../../containers/layout';
-
+import Layout from '../../containers/Layout';
+import Nothing from '../../components/Button'
+import { findByLabelText } from '@testing-library/react';
 
 function Bookings() {
   return (

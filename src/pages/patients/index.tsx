@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../../containers/layout';
+import Layout from '../../containers/Layout';
 import { Patients as pateintsData } from '../../data/patients';
 import PatientAbstractCard from '../../components/patientAbstractCard';
 import { IonItem } from '@ionic/react';

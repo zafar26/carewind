@@ -2,7 +2,7 @@ import React from 'react';
 import { IonItem } from '@ionic/react';
 import './index.scss';
 import PatientAbstractCard from '../patientAbstractCard';
-import BookingInfo from '../bookingInfo';
+import BookingInfo from '../BookingInfo';
 
 interface ContainerProps {
     name: string;

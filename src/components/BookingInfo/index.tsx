@@ -52,6 +52,7 @@ interface Props {
 
 const BookingInfo: FC<Props> = ({ statusValue, dateTime }) => {
   let agoDate = dayjs(dateTime);
+  // console.log(agoDate,"agoDate",dayjs,"dayjs",dateTime,"dateTime")
   return (
     <IonLabel class="ion-text-end">
       <p><IonIcon icon={timeOutline} /> {agoDate.fromNow()} </p>
