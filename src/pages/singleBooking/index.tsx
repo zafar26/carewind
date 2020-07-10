@@ -1,15 +1,12 @@
 import React from 'react';
-import { IonCard } from "@ionic/react";
-import PatientAbstractCard from '../../components/patientAbstractCard';
-import Layout from '../../containers/Layout';
-
+import Layout from '../../containers/layout';
+import { Patients } from '../../data/patients';
+import SingleBookingItem from '../../components/singleBookingItem';
 
 function singleBooking() {
     return (
         <Layout>
-            <IonCard>
-                <PatientAbstractCard patientName="Shah Rukh Khan" patientAge={54} patientPic="/assets/images/avatar.png" />
-            </IonCard>
+            <SingleBookingItem name={Patients[0].name} gender={Patients[0].gender} age={Patients[0].age} pic={Patients[0].pic} symptoms={Patients[0].symptoms} />
         </Layout>
     )
 };
