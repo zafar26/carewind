@@ -1,7 +1,6 @@
 import React from 'react';
 import { IonHeader, IonTitle, IonToolbar, IonButtons, IonButton, IonIcon, } from '@ionic/react';
 import { ellipsisVertical, search } from 'ionicons/icons';
-import './header.css';
 
 interface ContainerProps {
   name: string;

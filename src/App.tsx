@@ -37,7 +37,7 @@ import './theme/variables.css';
 import { tabDataArray } from './configs/tabs'
 
 /* page  imports */
-import FullBookingPage from './pages/fullBookingPage';
+import SingleBooking from './pages/singleBooking';
 
 
 let tabs = tabDataArray.map((item, key) =>
@@ -57,7 +57,7 @@ const App: React.FC = () => (
           <Route path="/bookings" component={Bookings} exact={true} />
           <Route path="/patients" component={Patients} exact={true} />
           <Route path="/reports" component={Reports} />
-          <Route path="/booking" component={FullBookingPage} />
+          <Route path="/booking" component={SingleBooking} />
           <Route path="/" render={() => <Redirect to="/bookings" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
