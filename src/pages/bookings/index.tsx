@@ -6,14 +6,14 @@ import Layout from '../../containers/layout';
 
 
 function Bookings() {
-  return (
-    <Layout>
-      <IonList>
-        {Patients.map((patient: { name: string, age: number, dateTime: string, statusValue: string }, key) =>
-          <BookingItem key={`patient-${key}`} name={patient.name} age={patient.age} dateTime={patient.dateTime} statusValue={patient.statusValue} />)}
-      </IonList>
-    </Layout>
-  );
+    return (
+        <Layout>
+            <IonList>
+                {Patients.map((patient: { name: string, gender: string, age: number, pic: string, dateTime: string, statusValue: string }, key) =>
+                    <BookingItem key={`patient-${key}`} name={patient.name} gender={patient.gender} age={patient.age} pic={patient.pic} dateTime={patient.dateTime} statusValue={patient.statusValue} />)}
+            </IonList>
+        </Layout>
+    );
 }
 
 export default Bookings;

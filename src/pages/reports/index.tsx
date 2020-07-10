@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../../containers/layout';
 
+
 function Reports() {
   return (
     <Layout>
