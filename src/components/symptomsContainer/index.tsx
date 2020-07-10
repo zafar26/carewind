@@ -4,7 +4,7 @@ import './index.scss'
 
 interface symptomsContainerProps {
     symptomsArray: Array<string>;
-}
+};
 
 const SymptomsContainer: React.FC<symptomsContainerProps> = (props) => {
 
@@ -12,7 +12,7 @@ const SymptomsContainer: React.FC<symptomsContainerProps> = (props) => {
 
     let symptoms = symptomsArray.sort().map((symptom, key) => (
         <IonBadge className="symptomBadge" key={key} color="light">{symptom}</IonBadge>
-    ))
+    ));
 
     return (
         <IonItem lines="none">
@@ -20,7 +20,7 @@ const SymptomsContainer: React.FC<symptomsContainerProps> = (props) => {
                 {symptoms}
             </IonItemSliding>
         </IonItem>
-    )
+    );
 };
 
 export default SymptomsContainer;

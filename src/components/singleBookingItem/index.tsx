@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { IonItem, IonIcon } from '@ionic/react';
+import { IonItem } from '@ionic/react';
 import PatientAbstract from '../patientAbstract';
 import SymptomsContainer from '../symptomsContainer';
 
