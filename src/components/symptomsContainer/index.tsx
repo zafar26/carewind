@@ -1,10 +1,13 @@
 import React from 'react';
-import { IonBadge, IonItem, IonItemSliding } from '@ionic/react';
+import { IonBadge, IonItemSliding } from '@ionic/react';
 import './index.scss'
 
 interface symptomsContainerProps {
     symptomsArray: Array<string>;
 };
+
+
+/* this component should be wrapped in IonItem */
 
 const SymptomsContainer: React.FC<symptomsContainerProps> = (props) => {
 
@@ -15,11 +18,9 @@ const SymptomsContainer: React.FC<symptomsContainerProps> = (props) => {
     ));
 
     return (
-        <IonItem lines="none">
-            <IonItemSliding>
-                {symptoms}
-            </IonItemSliding>
-        </IonItem>
+        <IonItemSliding>
+            {symptoms}
+        </IonItemSliding>
     );
 };
 
