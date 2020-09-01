@@ -8,7 +8,7 @@ interface BookingItemProps {
     name: string;
     gender: string;
     age: number;
-    pic : string;
+    pic: string;
     dateTime: string;
     statusValue: string
 }

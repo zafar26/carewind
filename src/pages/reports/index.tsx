@@ -3,11 +3,11 @@ import Layout from '../../containers/layout';
 
 
 function Reports() {
-  return (
-    <Layout>
-      Reports
-    </Layout>
-  );
+    return (
+        <Layout>
+            Reports
+        </Layout>
+    );
 }
 
 export default Reports;
